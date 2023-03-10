@@ -15,13 +15,13 @@ class Counter extends Component {
           </span>
           <button className="btn btn-warning btn-lg">Incriment</button>
         </div>
-        <div className="text-center text-decoration-none">
-          <ul>
-            <li>
-              {this.state.tags.map((tags) => (
-                <li>{tags}</li>
-              ))}
-            </li>
+        <div className="text-center text-decoration-none mt-5">
+          <ul className="list-group">
+            {this.state.tags.map((tags) => (
+              <li className="list-group-item list-group-item-primary">
+                {tags}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
