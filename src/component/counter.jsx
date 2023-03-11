@@ -6,20 +6,32 @@ class Counter extends Component {
     tags: ["tag1", "tag2", "tag3"],
   };
 
+  handleIncrement = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
   render() {
     return (
       <div className="">
         <div className="d-flex justify-content-center align-item-center mt-5 align-items-center">
-          <span style={{ fontSize: 20 }} className={this.getBageClassName()}>
+          <span style={{ fontSize: 25 }} className={this.getBageClassName()}>
             {this.formatCount()}
           </span>
-          <button className="btn btn-warning btn-lg">Incriment</button>
+          <button
+            onClick={this.handleIncrement}
+            className="btn btn-warning btn-lg"
+          >
+            Incriment
+          </button>
         </div>
-        <div className="text-center text-decoration-none mt-5">
+        <div className="text-center mt-5">
           <ul className="list-group">
-            {this.state.tags.map((tags) => (
-              <li className="list-group-item list-group-item-primary">
-                {tags}
+            {this.state.tags.length === 0 && (
+              <p className="text-uppercase">input new row</p>
+            )}
+            {this.state.tags.map((tag) => (
+              <li className="list-group-item list-group-item-primary" key={tag}>
+                {tag}
               </li>
             ))}
           </ul>
