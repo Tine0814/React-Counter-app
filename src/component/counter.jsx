@@ -12,11 +12,7 @@ class Counter extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
-      <div className="Dastine JHay BErnardo">
-=======
       <div className="Dastine">
->>>>>>> c3638577f9c0a32a5c0923c4aa4be5dc1c054361
         <div className="d-flex justify-content-center align-item-center mt-5 align-items-center">
           <span style={{ fontSize: 25 }} className={this.getBageClassName()}>
             {this.formatCount()}
